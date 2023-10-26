@@ -17,6 +17,7 @@ from modeller.scripts import complete_pdb
 def assess_dope(filename):
     """Assess a whole model with the DOPE method
     """
+
     env = Environ()
     env.libs.topology.read(file='$(LIB)/top_heav.lib')
     env.libs.parameters.read(file='$(LIB)/par.lib')
@@ -51,6 +52,7 @@ def main():
     dope_assessments = {}
 
     for m in args.model:
+        print("\n\nAssessing model {}\n".format(m))
         dope_assessments[m] = assess_dope(m)
 
     if dope_assessments:
