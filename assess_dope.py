@@ -44,7 +44,7 @@ def main():
     parser=argparse.ArgumentParser(description="Assess models previously generated with Modeller with the DOPE method.")
     parser.add_argument('model', nargs='+', help='Structural model previously generated with Modeller.')
     parser.add_argument('-o', '--output', default='dope_assessment.csv', help='CSV output file containing the DOPE assessment values per each input model [default: %(default)s].')
-    parser.add_argument('-v', '--version', action='version', version='1.0', help="Show program's version number and exit.")
+    parser.add_argument('-v', '--version', action='version', version='1.1', help="Show program's version number and exit.")
 
     args=parser.parse_args()
 
