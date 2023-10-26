@@ -17,14 +17,14 @@ from modeller.scripts import complete_pdb
 def assess_dope(filename):
     """Assess a whole model with the DOPE method
     """
-    env = environ()
+    env = Environ()
     env.libs.topology.read(file='$(LIB)/top_heav.lib')
     env.libs.parameters.read(file='$(LIB)/par.lib')
 
     mdl = complete_pdb(env, filename)
 
     # Select all atoms in the model
-    atmsel = selection(mdl)
+    atmsel = Selection(mdl)
 
     return atmsel.assess_dope()
 
